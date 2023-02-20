@@ -1,0 +1,23 @@
+{
+    "TWILIO_ACCOUNT": {
+        "TWILIO_AUTH_TOKEN": "7dd85afddbf4f5f5c7cf13ec09e51a37",
+        "TWILIO_TEST_AUTH_TOKEN": "fb7c90c854774317d90d284b6fa8d3c5",
+        "TWILIO_SID_TOKEN": "AC9e0ff341dd3648ca7385aeece739f6bb",
+        "TWILIO_TEST_SID_TOKEN": "ACafb5d45d80cd1f7ad038d183a7f9924f",
+        "TWILIO_MESSAGING_SID_TOKEN": "MGd159c1ac57ea87353eb93800d1be829e",
+        "TWILIO_FAILSAFE_LOGIN_TOKEN": ""
+    },
+    "DATABASE_ACCOUNT": {
+        "DATABASE_HOST": "localhost",
+        "DATABASE_USER": "root",
+        "DATABASE_PASS": "",
+        "DATABASE_NAME": "askkap-db"
+    },
+    "SYSTEM_SETTINGS": {
+        "ROOT_INCLUDES_DIR": "kap\/includes",
+        "ROOT_ASSETS_DIR": "kap\/assets",
+        "IS_PRODUCTION_MODE": false,
+        "BARANGGAY_NAME": "Brgy. M. Acevida",
+        "BARANGGAY_ADDRESS": "Siniloan, Laguna"
+    }
+}

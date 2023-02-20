@@ -1,0 +1,7 @@
+#Prevent users from directly accessing folders
+RedirectMatch 404 /css(.*)/$ 
+RedirectMatch 404 /img(.*)/$ 
+RedirectMatch 404 /includes(.*)/$ 
+RedirectMatch 404 /js(.*)/$ 
+RedirectMatch 404 /scss(.*)/$ 
+RedirectMatch 404 /vendor(.*)/$
