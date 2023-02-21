@@ -20,6 +20,15 @@
                             <div id="chatbox__messages--container">
                                 <div class="messages__item messages__item--visitor">
                                     Hi, I am ASK.KAP's virtual chat assistant, what can I do for you?
+                                    
+                                    </br>
+                                    </br>
+                                    Mga pangunahing serbisyo:
+                                    </br>
+                                    </br>
+                                    <a href="?page=documentations" target="_blank">Mag request ng Document</a></br>
+                                    <a href="?page=complaint_and_blotter" target="_blank">Mag file ng Complaint o Blotter</a></br>
+                                    <a href="?page=cctv_reviews" target="_blank">Mag request ng kopya ng CCTV replay</a>
                                 </div>
                             </div>
                         </div>
