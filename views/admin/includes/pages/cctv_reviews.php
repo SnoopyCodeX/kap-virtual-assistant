@@ -53,6 +53,31 @@ if (isset($_POST['approveCCTVReviewBtn'])) {
     $hasError = false;
     $hasSuccess = true;
     $message = "The <strong>cctv review</strong> has been approved but <strong>Failed to send SMS text to Mr./Mrs. $name.</strong>";
+
+    $startDatetime = date("Y-m-d H:i:s", strtotime($datetime, time()));
+    $endDatetime = date("Y-m-d H:i:s", strtotime($datetime, time()));
+
+    $addScheduleResult = $conn->query("INSERT INTO $schedulesTable(
+      owner_id, 
+      event, 
+      fromAdmin,
+      start_datetime, 
+      end_datetime,
+      allDay,
+      location
+    ) VALUES(
+      '${userInfo['id']}',
+      'Claiming of cctv request by ${userInfo['fullname']}',
+      '1',
+      '$startDatetime',
+      '$endDatetime',
+      '0',
+      'Baranggay Hall'
+    )");
+
+    $hasError = false;
+    $hasSuccess = true;
+    $message = "The <strong>cctv review</strong> has been approved and <strong>Mr./Mrs. $name</strong> has been notified thru SMS Text.";
   } else {
     $hasError = true;
     $hasSuccess = false;

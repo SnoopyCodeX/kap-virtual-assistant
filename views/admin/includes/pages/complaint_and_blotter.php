@@ -47,6 +47,27 @@ if (isset($_POST['approveComplaintBtn'])) {
     $hasError = false;
     $hasSuccess = true;
     $message = "The <strong>$natureOfComplaint</strong> has been approved but <strong>Failed to send SMS text to Mr./Mrs. $name.</strong>";
+
+    $startDatetime = date("Y-m-d H:i:s", strtotime($datetime, time()));
+    $endDatetime = date("Y-m-d H:i:s", strtotime($datetime, time()));
+
+    $addScheduleResult = $conn->query("INSERT INTO $schedulesTable(
+      owner_id, 
+      event, 
+      fromAdmin,
+      start_datetime, 
+      end_datetime,
+      allDay,
+      location
+    ) VALUES(
+      '${userInfo['id']}',
+      'Complaint request for $natureOfComplaint by ${userInfo['fullname']}',
+      '1',
+      '$startDatetime',
+      '$endDatetime',
+      '0',
+      'Baranggay Hall'
+    )");
   } else {
     $hasError = true;
     $hasSuccess = false;
@@ -138,6 +159,27 @@ if (isset($_POST['approveBlotterBtn'])) {
     $hasError = false;
     $hasSuccess = true;
     $message = "The <strong>$natureOfBlotter</strong> has been approved but <strong>Failed to send SMS text to Mr./Mrs. $name.</strong>";
+
+    $startDatetime = date("Y-m-d H:i:s", strtotime($datetime, time()));
+    $endDatetime = date("Y-m-d H:i:s", strtotime($datetime, time()));
+
+    $addScheduleResult = $conn->query("INSERT INTO $schedulesTable(
+      owner_id, 
+      event, 
+      fromAdmin,
+      start_datetime, 
+      end_datetime,
+      allDay,
+      location
+    ) VALUES(
+      '${userInfo['id']}',
+      'Blotter request for $natureOfBlotter by ${userInfo['fullname']}',
+      '1',
+      '$startDatetime',
+      '$endDatetime',
+      '0',
+      'Baranggay Hall'
+    )");
   } else {
     $hasError = true;
     $hasSuccess = false;
